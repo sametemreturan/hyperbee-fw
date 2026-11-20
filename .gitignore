@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------
+# hyperbee-fw .gitignore
+# Kural: derleme ciktilari ve kisiye/bilgisayara ozel dosyalar repoya girmez.
+# Kaynak, .ioc, .project, .cproject, .mxproject, Core/, Drivers/, *.ld girer.
+# ---------------------------------------------------------------
+
+# Derleme klasorleri (CubeIDE yapilandirmalari)
+Debug/
+Release/
+build/
+
+# Derleme ara ve son ciktilari
+*.o
+*.d
+*.su
+*.cyclo
+*.obj
+*.elf
+*.map
+*.list
+*.hex
+*.bin
+*.srec
+
+# Eclipse / CubeIDE calisma alani ve kullaniciya ozel ayarlar
+.metadata/
+RemoteSystemsTempFiles/
+*.launch
+.settings/language.settings.xml
+
+# CubeMX gecici dosyalari
+*.bak
+.mxproject.bak
+
+# Isletim sistemi / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.swp
+*~

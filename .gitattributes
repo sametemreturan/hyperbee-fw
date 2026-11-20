@@ -1,0 +1,17 @@
+# Satir sonu kurali: depoda LF saklanir, her isletim sistemi kendi
+# bicimiyle cikarir. CubeMX (Windows'ta CRLF) ve Linux'tan gelen
+# degisiklikler "her satir degisti" gurultusu yaratmaz.
+* text=auto
+
+# Windows betikleri Windows satir sonuyla kalsin
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Ikili dosyalar: satir sonu donusumu yapilmaz, fark gosterilmez
+*.png binary
+*.jpg binary
+*.pdf binary
+*.a   binary
+*.elf binary
+*.bin binary
