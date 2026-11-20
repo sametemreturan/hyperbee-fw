@@ -21,7 +21,7 @@ hyperbee-fw/
 ├─ docs/
 │   ├─ kurulum.md     araçların kurulumu, sürümler, karşılaşılan sorunlar
 │   ├─ F0-teslim.md   F0 teslim notu
-│   └─ delil/         derleme günlükleri, ekran görüntüleri
+│   └─ delil/         derleme günlükleri, ekran görüntüleri, temiz klon testi
 ├─ firmware/
 │   └─ hb_f446re_bos/ NUCLEO-F446RE ilk (boş) proje — CubeMX + CubeIDE
 ├─ libs/              ileride: ortak sürücüler ve kütüphaneler

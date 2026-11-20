@@ -1,0 +1,32 @@
+# Temiz klondan yeniden derleme (2026-11-20 21:00)
+# Amac: repoda derleme icin gereken her seyin bulundugunu ve derleme ciktisinin repoda olmadigini gostermek.
+
+> git clone https://github.com/sametemreturan/hyperbee-fw.git <bos gecici klasor>\klon_test
+clone cikis: 0
+klon HEAD: f91aa471c7dde71061d6833535331076425fc0db   (yerel HEAD ve origin/main ile ayni)
+izlenen dosya: 105
+derleme ciktisi (*.elf, *.o): 0 dosya; firmware/hb_f446re_bos/Debug klasoru: yok
+git ls-files icinde Debug/ Release/ build/ .metadata/ *.o *.d *.elf *.map *.list *.su *.cyclo
+  language.settings.xml *.launch eslesmesi: yok
+
+> powershell -ExecutionPolicy Bypass -File <klon>\tools\build.ps1
+21:00:46 Build Finished. 0 errors, 0 warnings. (took 2s.535ms)
+Headless build completed successfully
+Sure: 8 sn | Arac cikis kodu: 0 | Derleme ozeti: 0 errors, 0 warnings
+   text	   data	    bss	    dec	    hex	filename
+   7320	     20	   1572	   8912	   22d0	hb_f446re_bos.elf
+SONUC: DERLEME BASARILI
+KLON BETIK CIKIS KODU: 0
+
+# ELF karsilastirmasi
+orijinal ELF SHA256 : 01345574420E63DA6EF9C4719531CD69CDE84868128BC90B54A0ADB5AAD12023
+klon ELF SHA256     : 70EC00FFDE63AD113CE7FCCF98A9120BB2A934E06CDEC1C33EF1E56428DABF0F  (farkli)
+
+Neden farkli? Hata ayiklama bilgisi (-g3) derleme klasorunun tam yolunu yazar (DW_AT_comp_dir):
+  orijinal: C:/Users/turan/dev/hyperbee-fw/firmware/hb_f446re_bos/Debug
+  klon    : C:/Users/turan/AppData/Local/Temp/.../klon_test/firmware/hb_f446re_bos/Debug
+
+Karta yuklenecek goruntu (arm-none-eabi-objcopy -O binary):
+  orijinal .bin: 7340 B  D785B2771774F0E9F42EE1335E60B2AA18D35AA33F984400445A8DEDE467A74C
+  klon     .bin: 7340 B  D785B2771774F0E9F42EE1335E60B2AA18D35AA33F984400445A8DEDE467A74C
+  -> AYNI (7340 B = text 7320 + data 20)
