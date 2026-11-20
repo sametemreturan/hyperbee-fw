@@ -62,6 +62,6 @@ günlüğü `build/` altına kaydeder. Başarısızsa çıkış kodu 1'dir.
   mesajları kullanılıyor. Kural gelince bu bölüm güncellenecek.
 
 ## Lisans notu
-Kendi kodumuz takıma aittir. Projeye CubeMX'in kopyaladığı ST kodları kendi lisanslarıyla gelir:
+Kendi kodumuzun lisansı takımla netleştirilecek (henüz bir `LICENSE` dosyası yok). Projeye CubeMX'in kopyaladığı ST kodları kendi lisanslarıyla gelir:
 STM32F4 HAL **BSD-3-Clause**, CMSIS **Apache-2.0** (dosyalardaki telif başlıkları silinmez).
 Araçlar (CubeIDE, CubeMX) ST'nin SLA0048 sözleşmesine tabidir: ST yazılımı yalnızca ST çipleriyle kullanılır.

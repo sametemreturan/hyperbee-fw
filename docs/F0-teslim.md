@@ -44,6 +44,9 @@ Proje: `firmware/hb_f446re_bos` — NUCLEO-F446RE (STM32F446RETx), CubeMX'te kar
   (`objcopy -O binary`, 7340 B) **aynı** (SHA256 `D785B27…A74C`).
 - Program 512 KB flash'ın ~7,2 KB'ını, 128 KB RAM'in ~1,6 KB'ını kullanıyor.
 - ELF başlığı: ELF32, ARM, hard-float ABI, giriş adresi `0x0800081D` (STM32 flash bölgesi).
+- **Bağımsız denetim (2026-11-20):** GitHub'dan alınan yeni bir klon, `tools/build.ps1` kullanılmadan doğrudan
+  `stm32cubeidec.exe … headlessbuild -build hb_f446re_bos/Debug` komutuyla derlendi: `0 errors, 0 warnings`,
+  size 7320 / 20 / 1572; `.isr_vector` `0x08000000`'da, `main` ve `SystemClock_Config` ELF'te var.
 
 ## Kapsam dışı / yapılmayanlar
 - Karta yükleme (flash) ve hata ayıklama — görev "derlendi" diyor; kart takılınca yapılabilir.

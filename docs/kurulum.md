@@ -97,6 +97,7 @@ Seçenek listesi yazdırıp 0 koduyla çıkmalı (ilk açılış ~1 dk sürebili
 |---|---|
 | CubeIDE sürüm notu (RN0114) hâlâ 2.2.0 gösteriyor | 2.3.0 yeni çıkmış (build 2026-11-12); sürüm notu sonra yayımlanıyor. Sorun çıkarsa aynı sayfadan "Select version" ile 2.2.0 kurulabilir |
 | CubeMX günlüğünde `Failed to refresh advertisement data` | ST'nin reklam/haber içeriği indirilemedi; işlevi etkilemez. Aynı açılışta `Integrity check success = true` |
-| CubeIDE 2.x'te "STM32 Project" sihirbazı yok | Beklenen davranış (CubeMX ayrıldı). Proje CubeMX'te oluşturulup içe aktarılır |
+| CubeIDE 2.x'te 1.x'teki gibi CubeMX'li "STM32 Project" sihirbazı yok | Beklenen davranış (CubeMX ayrıldı; cihaz yapılandırması yalnızca CubeMX'te). Proje CubeMX'te oluşturulup içe aktarılır. Karşılama sayfasındaki "Create / Import STM32 project" düğmesi bu kurulumda denenmedi |
+| Kurulu `stm32cubeide.exe` için `Get-AuthenticodeSignature` → `HashMismatch` (imzalayan Eclipse Foundation) | Eclipse tabanlı ürünlerde bilinen durum: üretici `eclipse.exe`'yi yeniden adlandırıp simgesini değiştirince Eclipse imzası bozulur. Güven, ST imzalı **yükleyicinin** `Valid` olmasına dayanır (§3). 2026-11-20'de kurulum klasöründeki diğer ikili dosyalar: 360 `Valid`, 16 imzasız, yalnızca bu dosya `HashMismatch`; komut satırı sürümü `stm32cubeidec.exe` `Valid` |
 | İlk açılışta Project Explorer görünmüyor | "Information Center" karşılama sekmesi pencereyi kaplıyor. Sekmeyi kapat ya da **Window → Show View → Project Explorer** |
 | `.settings/language.settings.xml` git'e girmek istedi | `.gitignore`'da ortasında `/` olan kural yalnız köke göre eşleşir; `**/.settings/language.settings.xml` yazıldı |
