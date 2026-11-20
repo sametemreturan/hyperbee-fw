@@ -77,9 +77,26 @@ Komut satırı derleyicisinin (headless) çalıştığını görmek için:
 ```
 Seçenek listesi yazdırıp 0 koduyla çıkmalı (ilk açılış ~1 dk sürebilir).
 
-## 6. Karşılaşılan durumlar
+## 6. İlk proje (NUCLEO-F446RE) nasıl oluşturuldu
+1. CubeMX → **File → New Project** → **Board Selector** → `NUCLEO-F446RE` → **Start Project**.
+2. "Initialize all peripherals with their default Mode?" → **Yes** (kartın varsayılanları: SWD hata ayıklama,
+   LD2 LED, B1 düğme, USART2 sanal COM, saat ağacı).
+3. CubeMX ilk seferde **STM32Cube FW_F4 V1.28.3** paketini indirir → `%USERPROFILE%\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3`.
+4. **Project Manager**: Project Name `hb_f446re_bos`, Location `<repo>\firmware`, Toolchain/IDE **STM32CubeIDE**,
+   Generate Under Root işaretli; Code Generator → "Copy only the necessary library files".
+5. **GENERATE CODE** → Close.
+6. CubeIDE → **File → Import → General → Existing Projects into Workspace** → root:
+   `<repo>\firmware\hb_f446re_bos` → "Copy projects into workspace" **işaretsiz** → Finish.
+7. **Project → Build Project** → Console: `Build Finished. 0 errors, 0 warnings.`
+
+`.ioc` özeti: `MxCube.Version=6.19.0`, `Mcu.UserName=STM32F446RETx`, `board=NUCLEO-F446RE`,
+`ProjectManager.FirmwarePackage=STM32Cube FW_F4 V1.28.3`, `TargetToolchain=STM32CubeIDE`.
+
+## 7. Karşılaşılan durumlar
 | Durum | Açıklama / çözüm |
 |---|---|
 | CubeIDE sürüm notu (RN0114) hâlâ 2.2.0 gösteriyor | 2.3.0 yeni çıkmış (build 2026-11-12); sürüm notu sonra yayımlanıyor. Sorun çıkarsa aynı sayfadan "Select version" ile 2.2.0 kurulabilir |
 | CubeMX günlüğünde `Failed to refresh advertisement data` | ST'nin reklam/haber içeriği indirilemedi; işlevi etkilemez. Aynı açılışta `Integrity check success = true` |
 | CubeIDE 2.x'te "STM32 Project" sihirbazı yok | Beklenen davranış (CubeMX ayrıldı). Proje CubeMX'te oluşturulup içe aktarılır |
+| İlk açılışta Project Explorer görünmüyor | "Information Center" karşılama sekmesi pencereyi kaplıyor. Sekmeyi kapat ya da **Window → Show View → Project Explorer** |
+| `.settings/language.settings.xml` git'e girmek istedi | `.gitignore`'da ortasında `/` olan kural yalnız köke göre eşleşir; `**/.settings/language.settings.xml` yazıldı |

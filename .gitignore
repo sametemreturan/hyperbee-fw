@@ -26,7 +26,8 @@ build/
 .metadata/
 RemoteSystemsTempFiles/
 *.launch
-.settings/language.settings.xml
+# (ortada "/" olan kural yalnizca koke gore eslesir; alt klasorler icin **/ gerekir)
+**/.settings/language.settings.xml
 
 # CubeMX gecici dosyalari
 *.bak

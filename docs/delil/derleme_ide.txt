@@ -1,0 +1,16 @@
+﻿# Yol (a): STM32CubeIDE arayuzu - Project > Build Project
+# Konsol (ekran goruntusu build_ide.png): 20:52:51 Build Finished. 0 errors, 0 warnings. (took 5s.806ms)
+# Olcum zamani: 2026-11-20 20:55:37
+ELF: firmware/hb_f446re_bos/Debug/hb_f446re_bos.elf
+Boyut: 1008536 bayt, son yazma: 2026-11-20 20:52:50
+SHA256: 01345574420E63DA6EF9C4719531CD69CDE84868128BC90B54A0ADB5AAD12023
+
+> arm-none-eabi-size hb_f446re_bos.elf
+   text	   data	    bss	    dec	    hex	filename
+   7320	     20	   1572	   8912	   22d0	C:\Users\turan\dev\hyperbee-fw\firmware\hb_f446re_bos\Debug\hb_f446re_bos.elf
+
+> arm-none-eabi-readelf -h (ozet)
+  Class:                             ELF32
+  Machine:                           ARM
+  Entry point address:               0x800081d
+  Flags:                             0x5000400, Version5 EABI, hard-float ABI
