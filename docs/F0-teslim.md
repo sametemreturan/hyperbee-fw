@@ -6,10 +6,10 @@
 | Koltuk | GOMULU-FW — STM32 Gömülü Yazılım Mühendisi (Samet Emre Turan) |
 | Faz / son tarih | F0 · 2026-11-22 |
 | Hazırlanma tarihi | 2026-11-20 (metin düzeltmesi: 2026-11-23) |
-| Repo | https://github.com/sametemreturan/hyperbee-fw (private; takım organizasyonu paylaşılınca oraya aktarılabilir) |
+| Repo | https://github.com/sametemreturan/hyperbee-fw (2026-11-23'ten beri herkese açık; takım organizasyonu paylaşılınca oraya aktarılabilir) |
 
 ## 1. GitHub repo yapısı kuruldu ✔
-- Repo: `sametemreturan/hyperbee-fw`, **PRIVATE**, varsayılan dal `main`.
+- Repo: `sametemreturan/hyperbee-fw`, **herkese açık (public)**, varsayılan dal `main`.
 - Yapı: `README.md`, `.gitignore`, `.gitattributes`, `docs/` (kurulum, teslim, delil), `firmware/` (projeler),
   `libs/` (ileride ortak kod), `tools/build.ps1` (komut satırından derleme). Ayrıntı: [README](../README.md).
 - Derleme çıktıları ve kişisel IDE ayarları repoda **yok** (`.gitignore`; temiz klonda kontrol edildi).
