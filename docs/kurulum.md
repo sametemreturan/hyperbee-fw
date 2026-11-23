@@ -79,8 +79,8 @@ Seçenek listesi yazdırıp 0 koduyla çıkmalı (ilk açılış ~1 dk sürebili
 
 ## 6. İlk proje (NUCLEO-F446RE) nasıl oluşturuldu
 1. CubeMX → **File → New Project** → **Board Selector** → `NUCLEO-F446RE` → **Start Project**.
-2. "Initialize all peripherals with their default Mode?" → **Yes** (kartın varsayılanları: SWD hata ayıklama,
-   LD2 LED, B1 düğme, USART2 sanal COM, saat ağacı).
+2. "Initialize all peripherals with their default Mode?" → **Yes** (kartın varsayılanları: SWD hata ayıklama
+   pinleri, BSP üzerinden LD2 LED ve B1 düğme örnek kodu, 84 MHz sistem saati; USART2'nin yalnızca pinleri ayarlanır, çevre birimi başlatılmaz).
 3. CubeMX ilk seferde **STM32Cube FW_F4 V1.28.3** paketini indirir → `%USERPROFILE%\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3`.
 4. **Project Manager**: Project Name `hb_f446re_bos`, Location `<repo>\firmware`, Toolchain/IDE **STM32CubeIDE**,
    Generate Under Root işaretli; Code Generator → "Copy only the necessary library files".

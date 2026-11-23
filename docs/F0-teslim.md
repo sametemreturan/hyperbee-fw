@@ -5,7 +5,7 @@
 | Görev | GitHub repo yapısı kuruldu, CubeIDE bilgisayara kuruldu ve ilk boş proje derlendi |
 | Koltuk | GOMULU-FW — STM32 Gömülü Yazılım Mühendisi (Samet Emre Turan) |
 | Faz / son tarih | F0 · 2026-11-22 |
-| Teslim tarihi | 2026-11-20 |
+| Hazırlanma tarihi | 2026-11-20 (metin düzeltmesi: 2026-11-23) |
 | Repo | https://github.com/sametemreturan/hyperbee-fw (private; takım organizasyonu paylaşılınca oraya aktarılabilir) |
 
 ## 1. GitHub repo yapısı kuruldu ✔
@@ -29,7 +29,9 @@
 
 ## 3. İlk boş proje derlendi ✔
 Proje: `firmware/hb_f446re_bos` — NUCLEO-F446RE (STM32F446RETx), CubeMX'te kartın varsayılan ayarlarıyla
-üretildi; kullanıcı kodu boş.
+üretildi; elle kod eklenmedi. `main.c` tamamen boş değildir: CubeMX'in kart (BSP) örnek kodunu içerir
+(LD2 yanar, B1 düğmesine basılınca durumu değişir). Sistem saati 84 MHz. USART2 pinleri (PA2/PA3) ayarlıdır,
+USART2 çevre birimi başlatılmaz.
 
 İki **bağımsız** yoldan derlendi, üçüncü olarak GitHub'dan temiz klonla tekrarlandı:
 
